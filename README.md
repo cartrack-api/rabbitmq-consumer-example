@@ -47,4 +47,11 @@ python consumer.py
 - `consumer.py` uses `python-dotenv` to load variables from `.env`.
 - Dependencies are listed in `requirements.txt`.
 
+## Queue Properties
+
+By default, Cartrack queues have the following properties unless specified otherwise:
+
+- `x-message-ttl`: `18000000` (message time-to-live in milliseconds)
+- `durable`: `true` (the queue will survive broker restarts)
+
 That's all — the consumer will connect to the configured queue and print messages as they arrive.
